@@ -1,0 +1,86 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'Botw';
+  src: url("/css/The Wild Breath of Zelda.otf");
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: 'Botw', sans-serif;
+}
+
+body {
+  background-image: url(../img/background.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  color: #f7ecd8;
+  -webkit-text-stroke: 0.5px #2b2b2b;
+}
+
+h1 {
+  text-align: center;
+  font-size: 50px;
+}
+
+.equipamentos .subtitulo {
+  text-align: center;
+  font-size: 40px;
+}
+
+.equipamentos .flex-wrapper {
+  margin: 0 auto;
+  max-width: 1920px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.equipamentos .flex-wrapper .item {
+  max-width: 400px;
+  text-align: center;
+  margin: 50px;
+  background-color: #937043d3;
+  border-radius: 5px;
+  border: 2px solid #f7ecd8;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.equipamentos .flex-wrapper .item .nome {
+  font-size: 40px;
+}
+
+.equipamentos .flex-wrapper .item .imagem {
+  border-radius: 5px;
+  margin: 0px 30px 0px 30px;
+}
+
+.equipamentos .flex-wrapper .item .descriçao {
+  font-size: 25px;
+  margin: 10px 30px 0px 30px;
+}
+
+.equipamentos .flex-wrapper .item ul {
+  padding: 0;
+  list-style-type: none;
+  font-size: 20px;
+}
+
+@media only screen and (min-width: 700px) {
+  .item:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+/*# sourceMappingURL=style.css.map */
