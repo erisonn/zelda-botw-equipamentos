@@ -1,16 +1,16 @@
-const API_URL = 'https://botw-compendium.herokuapp.com/api/v2/category/equipment';
+var EQUIPMENTS_URL = 'https://botw-compendium.herokuapp.com/api/v2/category/equipment';
 
-getEquipments = (url) => {
+fetchAPI = (url) => {
     let request = new XMLHttpRequest()
     request.open("GET", url, false)
     request.send()
     return request.responseText
 }
 
-main = () => {
-    equipments = getEquipments(API_URL);
-    equipments_data = JSON.parse(equipments)
-    Array.from(equipments_data.data).forEach((item) => {
+getEquipamentos = () => {
+    App = fetchAPI(EQUIPMENTS_URL);
+    App_data = JSON.parse(App);
+    Array.from(App_data.data).forEach((item) => {
 
         // Cria os elementos
         let Container = document.createElement('div');
@@ -48,4 +48,20 @@ main = () => {
     })
 }
 
-main();
+getEquipamentos();
+
+// scroll to top 
+
+const scrollTop = document.querySelector('.scroll-top');
+
+window.addEventListener('scroll', () => {
+    if (pageYOffset > 340) {
+        scrollTop.classList.add('show')
+    } else {
+        scrollTop.classList.remove('show')
+    }
+})
+
+scrollTop.addEventListener('click', () => {
+    window.scrollTo({top: 0, behavior: "smooth"});
+})

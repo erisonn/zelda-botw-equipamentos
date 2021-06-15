@@ -13,10 +13,12 @@ body, html {
 
 body {
   background-image: url(../img/background.jpg);
+  background-color: #222222;
+  background-blend-mode: darken;
   background-position: center;
   background-attachment: fixed;
-  color: #f7ecd8;
-  -webkit-text-stroke: 0.5px #2b2b2b;
+  background-size: cover;
+  color: #d1c0a0;
 }
 
 h1 {
@@ -47,11 +49,9 @@ h1 {
 
 .equipamentos .flex-wrapper .item {
   max-width: 400px;
+  height: 700px;
   text-align: center;
-  margin: 50px;
-  background-color: #937043d3;
-  border-radius: 5px;
-  border: 2px solid #f7ecd8;
+  margin: 20px 50px 0px 50px;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
   cursor: pointer;
@@ -75,6 +75,33 @@ h1 {
   padding: 0;
   list-style-type: none;
   font-size: 20px;
+}
+
+.scroll-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 90%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-family: "Botw", sans-serif;
+  font-size: 20px;
+  color: #d1c0a0;
+  background-color: rgba(0, 0, 0, 0.404);
+  border: 1px solid #d1c0a0;
+  border-radius: 2px;
+  cursor: pointer;
+  opacity: 0.6;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.scroll-top:hover {
+  opacity: 1;
+}
+
+.show {
+  display: block;
 }
 
 @media only screen and (min-width: 700px) {

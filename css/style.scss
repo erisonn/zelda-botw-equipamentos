@@ -10,10 +10,12 @@ body, html {
 }
 body {
     background-image: url(../img/background.jpg);
+    background-color: rgb(34, 34, 34);
+    background-blend-mode: darken;
     background-position: center;
     background-attachment: fixed;
-    color: rgb(247, 236, 216);
-    -webkit-text-stroke: 0.5px rgb(43, 43, 43);
+    background-size: cover;
+    color: rgb(209, 192, 160);
 }
 h1 {
     text-align: center;
@@ -33,11 +35,9 @@ h1 {
         justify-content: center;
         .item {
             max-width: 400px;
+            height: 700px;
             text-align: center;
-            margin: 50px;
-            background-color: #937043d3;
-            border-radius: 5px;
-            border: 2px solid rgb(247, 236, 216);
+            margin: 20px 50px 0px 50px;
             transition: 0.2s ease-in-out;
             cursor: pointer;
             .nome {
@@ -58,6 +58,28 @@ h1 {
             }
         }
     }
+}
+.scroll-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 90%;
+    transform: translateX(-50%);
+    font-family: "Botw", sans-serif;
+    font-size: 20px;
+    color: rgb(209, 192, 160);
+    background-color: rgba(0, 0, 0, 0.404);
+    border: 1px solid rgb(209, 192, 160);
+    border-radius: 2px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s ease-in-out;
+    &:hover {
+         opacity: 1;
+    }
+}
+.show {
+    display: block;
 }
 @media only screen and (min-width: 700px) {
     .item:hover {
